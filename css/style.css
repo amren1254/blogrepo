@@ -11,7 +11,7 @@ body{
     overflow: hidden;
     background-color: #f1f1f1;
     padding: 20px 10px;
-    background: url(../../artifacts/635737535759800521-epa-afghanistan-mullah-omar.jpg);
+    background: url("../logo.svg") no-repeat ;
 }
   
   /* Style the header links */
@@ -92,16 +92,32 @@ main{
     padding-right: 1rem;
     padding-left: 1rem;
 }
+/* effect-shine */
+#landing-text-inner h1:hover {
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 2s infinite;
+  }
+  
+  @-webkit-keyframes shine {
+    from {
+      -webkit-mask-position: 150%;
+    }
+    
+    to {
+      -webkit-mask-position: -50%;
+    }
+  }
 #landing h2 {
     color: #888;
 }
 #landing-image {
-   background-image: url("../../artifacts/635737535759800521-epa-afghanistan-mullah-omar.jpg");
+   background-image: url("");
    background-position: center;
    background-size: cover; 
    background-repeat: no-repeat;
    height: 50vh;
-   flex:0 1 60vw;
+   flex:0 1 30vw;
    margin:1rem;
 
 }
@@ -133,10 +149,39 @@ main{
     padding-right: 1rem;
     padding-left: 1rem;
 }
+.intro {
+    padding: 0.8rem;
+    text-align: justify;
+    position: relative;
 
+}
+.intro h3{
+    font-size: 1rem;
+    text-shadow: 1px 1px 5px rgb(255, 0, 0);
+    font-family: Helvetica, Arial, sans-serif;
+
+}
 .caption {
     padding: 0.8rem;
-    text-align: center;
+    text-align: justify;
+    position: relative;
+
+}
+.caption h3{
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 1px rgb(187, 168, 0),
+               2px 2px 1px rgb(146, 5, 5);
+}
+.caption p{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #292f33
+
+}
+.caption p:hover{
+    background-color: rgb(214, 214, 214);
+
 }
 footer{
     text-align: center;
@@ -148,7 +193,39 @@ footer h3{
     font-size:3rem;
     margin-bottom: 0;
 }
-
+.tweetbutton {
+    inherit: none;
+    height: 16px;
+    display: inline-block;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    /* gradient background -- thanks http://ie.microsoft.com/testdrive/graphics/cssgradientbackgroundmaker/ */
+  background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -ms-linear-gradient(top, #FEFEFE 0%, #DFDFDF 100%);
+  background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -moz-linear-gradient(top, #FEFEFE 0%, #DFDFDF 100%);
+  background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -o-linear-gradient(top, #FEFEFE 0%, #DFDFDF 100%);
+  background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -webkit-gradient(linear, left top, left bottom, color-stop(0, #FEFEFE), color-stop(1, #DFDFDF));
+  background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -webkit-linear-gradient(top, #FEFEFE 0%, #DFDFDF 100%);
+  
+    border: 1px solid #cccccc;
+    padding-left: 22px;
+    padding-right: 4px;
+    padding-top: 2px;
+    
+    font-weight: bold;
+    font-size: 0.7em;
+    font-family: Arial;
+    
+    color: #333333;
+    text-decoration: none;
+  }
+  .tweetbutton:hover {
+	background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -ms-linear-gradient(top, #f7f7f7 0%, #d9d9d9 100%);
+background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -moz-linear-gradient(top, #f7f7f7 0%, #d9d9d9 100%);
+background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -o-linear-gradient(top, #f7f7f7 0%, #d9d9d9 100%);
+background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -webkit-gradient(linear, left top, left bottom, color-stop(0, #f7f7f7), color-stop(1, #d9d9d9));
+background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -webkit-linear-gradient(top, #f7f7f7 0%, #d9d9d9 100%);
+}
 @media (min-width: 500px) {
     #landing{
         display:flex;
